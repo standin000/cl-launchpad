@@ -1,0 +1,6 @@
+2009-11-20  Plato Wu  <standin-000@tianya.cn>
+
+	* A rough version, it includes a example which can get all clbuild
+	repository urls in clbuild-repos and add new clbuild repository url.
+	More function require my patch for drakma is approved.
+
