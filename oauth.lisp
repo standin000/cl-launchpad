@@ -37,10 +37,27 @@ See HyperSpec/Body/25_adb.htm"
 
 (defun get-token-and-login (user-name)
   (setf consumer-key user-name)
-  (get-request-token)
-  (format t "The authorization page(https://edge.launchpad.net/+authorize-token?oauth_token=~a) should be opening in your browser. After you have authorized this program to access Launchpad on your behalf you should come back here and press <Enter> to finish the authentication process." weak-oauth-token)
-  (read-line)
-  (exchange-request-token))
+  (with-open-file 
+      (s (merge-pathnames #P".oauth" (user-homedir-pathname)) 
+         :if-does-not-exist :create 
+         :direction :io
+         :if-exists :append)
+   (with-standard-io-syntax 
+     (loop for line = (read s nil) while line do
+           (when (string= (car line) user-name)
+             (setf oauth-token (second line))
+             (setf oauth-token-secret (third line))
+             (return-from get-token-and-login)))
+     (get-request-token)
+     (format t "The authorization page
+     (https://edge.launchpad.net/+authorize-token?oauth_token=~a) 
+     should be opening in your browser. After you have authorized
+     this program to access Launchpad on your behalf you should 
+     come back here and press <Enter> to finish the authentication 
+     process." weak-oauth-token)
+     (read-char *standard-input* nil nil)
+     (exchange-request-token)
+     (print (list consumer-key oauth-token oauth-token-secret) s))))
 
 (defun exchange-request-token ()
     (let ((responses 

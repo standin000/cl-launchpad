@@ -8,4 +8,5 @@
 
 (launchpad:open-a-bug project "test" "just testing")
 
+(launchpad:update-a-bug 483637 :title "modify test" :description "modify just testing")
 

@@ -23,7 +23,6 @@
                 :content-type "application/json"))
 
 (defun modify-entry (entry field)
-  ;; Plato Wu,2009/11/13: it need my patch for drakma
   (http-request entry
 		:method :patch
 		:additional-headers (get-additional-headers)
@@ -46,3 +45,7 @@
 	      ("description" . ,description)
 	      ("target" . ,(format nil "https://api.edge.launchpad.net/beta/~a" project))
 	      ("title" . ,title))))
+
+(defun update-a-bug (bug-id &key title description)
+  (modify-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)
+                (list (cons "title" title) (cons "description" description))))

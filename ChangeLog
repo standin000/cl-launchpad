@@ -1,3 +1,12 @@
+2009-11-28  Plato Wu  <standin-000@tianya.cn>
+
+	* launchpad.lisp (update-a-bug): add update a bug function.
+
+2009-11-27  Plato Wu  <standin-000@tianya.cn>
+
+	* oauth.lisp (get-token-and-login): save authentication tokens in
+	~/.launchpad and can reuse it in future.
+
 2009-11-20  Plato Wu  <standin-000@tianya.cn>
 
 	* A rough version, it includes a example which can get all clbuild
