@@ -1,9 +1,9 @@
 ;;;; -*- Mode: LISP; -*-
 (asdf:defsystem :launchpad
-  :version "0.1"
+  :version "0.2"
   :serial t
-  :author "Plato Wu <standin-000@tianya.cn>"
-  :license "GPL"
+  :author "Plato Wu <gtalk000@gmail.com>"
+  :license "MIT"
   :components ((:file "packages")
                (:file "oauth")
 	       (:file "launchpad"))

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html> 
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>DOCUMENTATION-TEMPLATE - a cool library</title>
+  <style type="text/css">
+  pre { padding:5px; background-color:#e0e0e0 }
+  h3, h4 { text-decoration: underline; }
+  a { text-decoration: none; padding: 1px 2px 1px 2px; }
+  a:visited { text-decoration: none; padding: 1px 2px 1px 2px; }
+  a:hover { text-decoration: none; padding: 1px 1px 1px 1px; border: 1px solid #000000; } 
+  a:focus { text-decoration: none; padding: 1px 2px 1px 2px; border: none; }
+  a.none { text-decoration: none; padding: 0; }
+  a.none:visited { text-decoration: none; padding: 0; } 
+  a.none:hover { text-decoration: none; border: none; padding: 0; } 
+  a.none:focus { text-decoration: none; border: none; padding: 0; } 
+  a.noborder { text-decoration: none; padding: 0; } 
+  a.noborder:visited { text-decoration: none; padding: 0; } 
+  a.noborder:hover { text-decoration: none; border: none; padding: 0; } 
+  a.noborder:focus { text-decoration: none; border: none; padding: 0; }  
+  pre.none { padding:5px; background-color:#ffffff }
+  </style>
+</head>
+
+<body bgcolor=white>
+
+<h2> <!-- TMPL_VAR package-name --> <!-- TMPL_VAR subtitle --></h2>
+
+<blockquote>
+<br>&nbsp;<br><h3><a name=abstract class=none>Abstract</a></h3>
+
+The code comes with
+a <a
+href="http://www.opensource.org/licenses/bsd-license.php">BSD-style
+license</a> so you can basically do with it whatever you want.
+
+<p>
+<font color=red>Download shortcut:</font> <a href="http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz">http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz</a>.
+</blockquote>
+
+<br>&nbsp;<br><h3><a class=none name="contents">Contents</a></h3>
+<ol>
+  <li><a href="#download">Download</a>
+  <li><a href="#dictionary">The <!-- TMPL_VAR package_name --> dictionary</a>
+    <ol>
+    <!-- TMPL_LOOP symbols -->
+    <li><a href="#<!-- TMPL_VAR symbol -->"><code><!-- TMPL_VAR symbol --></code></a>
+    <!-- /TMPL_LOOP -->
+    </ol>
+  <li><a href="#ack">Acknowledgements</a>
+</ol>
+
+<br>&nbsp;<br><h3><a class=none name="download">Download</a></h3>
+
+<!-- TMPL_VAR package-name --> together with this documentation can be downloaded from <a
+href="http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz">http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz</a>. The
+current version is 0.2.
+
+<br>&nbsp;<br><h3><a class=none name="dictionary">The <!-- TMPL_VAR package-name --> dictionary</a></h3>
+
+<!-- TMPL_VAR body -->
+
+<br>&nbsp;<br><h3><a class=none name="ack">Acknowledgements</a></h3>
+
+<p>
+This documentation was prepared with <a href="http://weitz.de/documentation-template/">DOCUMENTATION-TEMPLATE</a>.
+</p>
+<p>
+<!-- hhmts start --> Last modified: Mon Dec  7 13:41:52 CST 2009 <!-- hhmts end -->
+</body>
+</html>
