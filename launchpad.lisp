@@ -29,6 +29,12 @@
 		:content (encode-json-alist-to-string field)
                 :content-type "application/json"))
 
+(defun delete-entry (entry)
+  (http-request entry
+		:method :delete
+		:additional-headers (get-additional-headers)))
+
+
 (defun post-entry (entry parameters)
   (http-request entry
 		:method :post
@@ -49,3 +55,11 @@
 (defun update-a-bug (bug-id &key title description)
   (modify-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)
                 (list (cons "title" title) (cons "description" description))))
+
+(defun get-a-bug (bug-id)
+  (get-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)))
+
+(defun add-a-comment (bug-id comment)
+  (post-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)
+	    `(("ws.op" . "newMessage")
+	      ("content" . ,comment))))

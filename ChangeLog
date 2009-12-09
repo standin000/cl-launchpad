@@ -1,3 +1,8 @@
+2009-12-09  Plato Wu  <gtalk000@gmail.com>
+
+	* launchpad.lisp (get-a-bug): New it.
+	(add-a-comment): New it.
+
 2009-12-07  Plato Wu  <gtalk000@gmail.com>
 
 	* doc/index.html (href): Add a document created by my fork in documentation-template.

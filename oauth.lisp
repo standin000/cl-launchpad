@@ -36,6 +36,10 @@ See HyperSpec/Body/25_adb.htm"
    (setf weak-oauth-token-secret (fourth responses))))
 
 (defun get-token-and-login (user-name)
+  "Get a request token and let user approve it, then OPEN-A-BUG it to
+   get a permanent request token which will be used to sign your
+   requests. Save user-name and token in ~/.oauth, so load token for
+   existed user directly in the future."
   (setf consumer-key user-name)
   (with-open-file 
       (s (merge-pathnames #P".oauth" (user-homedir-pathname)) 

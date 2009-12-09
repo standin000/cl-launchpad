@@ -61,7 +61,7 @@ license</a> so you can basically do with it whatever you want.
 
 LAUNCHPAD together with this documentation can be downloaded from <a
 href="http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz">http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz</a>. The
-current version is 0.1.
+current version is 0.2.
 
 <br>&nbsp;<br><h3><a class=none name="dictionary">The LAUNCHPAD dictionary</a></h3>
 
@@ -84,7 +84,10 @@ current version is 0.1.
 <p><br>[Function]<br><a class=none name='get-token-and-login'><b>get-token-and-login</b> <i>user-name</i> =&gt; <i>result</i></a>
 <blockquote><br>
 
-
+Get a request token and let user approve it, then OPEN-A-BUG it to
+   get a permanent request token which will be used to sign your
+   requests. Save user-name and token in ~/.oauth, so load token for
+   existed user directly in the future.
 
 </blockquote>
 
@@ -121,6 +124,6 @@ current version is 0.1.
 This documentation was prepared with <a href="http://weitz.de/documentation-template/">DOCUMENTATION-TEMPLATE</a>.
 </p>
 <p>
-<!-- hhmts start --> Last modified: Mon Dec  7 11:24:34 CST 2009 <!-- hhmts end -->
+<!-- hhmts start --> Last modified: Wed Dec  9 09:49:03 CST 2009 <!-- hhmts end -->
 </body>
 </html>
