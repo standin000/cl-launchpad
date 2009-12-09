@@ -45,6 +45,10 @@ license</a> so you can basically do with it whatever you want.
   <li><a href="#dictionary">The  dictionary</a>
     <ol>
     
+    <li><a href="#delete-a-bug"><code>delete-a-bug</code></a>
+    
+    <li><a href="#get-a-bug"><code>get-a-bug</code></a>
+    
     <li><a href="#get-all-bugs"><code>get-all-bugs</code></a>
     
     <li><a href="#get-token-and-login"><code>get-token-and-login</code></a>
@@ -67,6 +71,30 @@ current version is 0.2.
 
 
 
+<!-- Entry for DELETE-A-BUG -->
+
+<p><br>[Function]<br><a class=none name='delete-a-bug'><b>delete-a-bug</b> <i>bug-id</i> =&gt; <i>result</i></a>
+<blockquote><br>
+
+
+
+</blockquote>
+
+<!-- End of entry for DELETE-A-BUG -->
+
+
+<!-- Entry for GET-A-BUG -->
+
+<p><br>[Function]<br><a class=none name='get-a-bug'><b>get-a-bug</b> <i>bug-id</i> =&gt; <i>result</i></a>
+<blockquote><br>
+
+
+
+</blockquote>
+
+<!-- End of entry for GET-A-BUG -->
+
+
 <!-- Entry for GET-ALL-BUGS -->
 
 <p><br>[Function]<br><a class=none name='get-all-bugs'><b>get-all-bugs</b> <i>project</i> =&gt; <i>result</i></a>
@@ -84,7 +112,7 @@ current version is 0.2.
 <p><br>[Function]<br><a class=none name='get-token-and-login'><b>get-token-and-login</b> <i>user-name</i> =&gt; <i>result</i></a>
 <blockquote><br>
 
-Get a request token and let user approve it, then OPEN-A-BUG it to
+Get a request token and let user approve it, then exchange it to
    get a permanent request token which will be used to sign your
    requests. Save user-name and token in ~/.oauth, so load token for
    existed user directly in the future.
