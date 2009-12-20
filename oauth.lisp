@@ -35,7 +35,7 @@ See HyperSpec/Body/25_adb.htm"
    (setf weak-oauth-token (second responses))
    (setf weak-oauth-token-secret (fourth responses))))
 
-(defun get-token-and-login (user-name)
+(defun login (user-name)
   "Get a request token and let user approve it, then exchange it to
    get a permanent request token which will be used to sign your
    requests. Save user-name and token in ~/.oauth, so load token for
@@ -51,7 +51,7 @@ See HyperSpec/Body/25_adb.htm"
            (when (string= (car line) user-name)
              (setf oauth-token (second line))
              (setf oauth-token-secret (third line))
-             (return-from get-token-and-login)))
+             (return-from login)))
      (get-request-token)
      (format t "The authorization page
      (https://edge.launchpad.net/+authorize-token?oauth_token=~a) 

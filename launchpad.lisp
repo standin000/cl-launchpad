@@ -52,7 +52,7 @@
   (get-entry (format nil "https://api.edge.launchpad.net/beta/~a" project)
 	      :parameters '(("ws.op" . "searchTasks"))))
 
-(defun open-a-bug (project title description)
+(defun open-bug (project title description)
   (multiple-value-bind (body status header)
    (post-entry "https://api.edge.launchpad.net/beta/bugs" 
                `(("ws.op" . "createBug")
@@ -64,17 +64,17 @@
         (error "Create failed ~A!" header))
     (parse-integer (subseq (cdr (assoc :location header)) 41))))
 
-(defun update-a-bug (bug-id &key title description)
+(defun update-bug (bug-id &key title description)
   (multiple-value-bind (body status header)
    (modify-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)
                  (list (cons "title" title) (cons "description" description)))
     (if (not (= status 209))
         (cerror "update failed!" "Ignore it?"))))
 
-(defun get-a-bug (bug-id)
+(defun get-bug (bug-id)
   (get-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)))
 
-(defun add-a-comment (bug-id comment)
+(defun add-comment (bug-id comment)
   (post-entry (format nil "https://api.edge.launchpad.net/beta/bugs/~a" bug-id)
 	    `(("ws.op" . "newMessage")
 	      ("content" . ,comment))))

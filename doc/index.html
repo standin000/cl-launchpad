@@ -43,17 +43,15 @@ a MIT license so you can basically do with it whatever you want.
   <li><a href="#dictionary">The  dictionary</a>
     <ol>
     
-    <li><a href="#add-a-comment"><code>add-a-comment</code></a>
-    
-    <li><a href="#get-a-bug"><code>get-a-bug</code></a>
+    <li><a href="#add-comment"><code>add-comment</code></a>
     
     <li><a href="#get-all-bugs"><code>get-all-bugs</code></a>
     
-    <li><a href="#get-token-and-login"><code>get-token-and-login</code></a>
+    <li><a href="#get-bug"><code>get-bug</code></a>
     
-    <li><a href="#open-a-bug"><code>open-a-bug</code></a>
+    <li><a href="#open-bug"><code>open-bug</code></a>
     
-    <li><a href="#update-a-bug"><code>update-a-bug</code></a>
+    <li><a href="#update-bug"><code>update-bug</code></a>
     
     </ol>
   <li><a href="#ack">Acknowledgements</a>
@@ -63,34 +61,22 @@ a MIT license so you can basically do with it whatever you want.
 
 LAUNCHPAD together with this documentation can be downloaded from <a
 href="http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz">http://common-lisp.net/project/cl-launchpad/cl-launchpad_latest.tar.gz</a>. The
-current version is 0.4.
+current version is 0.5.
 
 <br>&nbsp;<br><h3><a class=none name="dictionary">The LAUNCHPAD dictionary</a></h3>
 
 
 
-<!-- Entry for ADD-A-COMMENT -->
+<!-- Entry for ADD-COMMENT -->
 
-<p><br>[Function]<br><a class=none name='add-a-comment'><b>add-a-comment</b> <i>bug-id comment</i> =&gt; <i>result</i></a>
+<p><br>[Function]<br><a class=none name='add-comment'><b>add-comment</b> <i>bug-id comment</i> =&gt; <i>result</i></a>
 <blockquote><br>
 
 
 
 </blockquote>
 
-<!-- End of entry for ADD-A-COMMENT -->
-
-
-<!-- Entry for GET-A-BUG -->
-
-<p><br>[Function]<br><a class=none name='get-a-bug'><b>get-a-bug</b> <i>bug-id</i> =&gt; <i>result</i></a>
-<blockquote><br>
-
-
-
-</blockquote>
-
-<!-- End of entry for GET-A-BUG -->
+<!-- End of entry for ADD-COMMENT -->
 
 
 <!-- Entry for GET-ALL-BUGS -->
@@ -105,43 +91,40 @@ current version is 0.4.
 <!-- End of entry for GET-ALL-BUGS -->
 
 
-<!-- Entry for GET-TOKEN-AND-LOGIN -->
+<!-- Entry for GET-BUG -->
 
-<p><br>[Function]<br><a class=none name='get-token-and-login'><b>get-token-and-login</b> <i>user-name</i> =&gt; <i>result</i></a>
-<blockquote><br>
-
-Get a request token and let user approve it, then exchange it to
-   get a permanent request token which will be used to sign your
-   requests. Save user-name and token in ~/.oauth, so load token for
-   existed user directly in the future.
-
-</blockquote>
-
-<!-- End of entry for GET-TOKEN-AND-LOGIN -->
-
-
-<!-- Entry for OPEN-A-BUG -->
-
-<p><br>[Function]<br><a class=none name='open-a-bug'><b>open-a-bug</b> <i>project title description</i> =&gt; <i>result</i></a>
+<p><br>[Function]<br><a class=none name='get-bug'><b>get-bug</b> <i>bug-id</i> =&gt; <i>result</i></a>
 <blockquote><br>
 
 
 
 </blockquote>
 
-<!-- End of entry for OPEN-A-BUG -->
+<!-- End of entry for GET-BUG -->
 
 
-<!-- Entry for UPDATE-A-BUG -->
+<!-- Entry for OPEN-BUG -->
 
-<p><br>[Function]<br><a class=none name='update-a-bug'><b>update-a-bug</b> <i>bug-id <tt>&amp;key</tt> title description</i> =&gt; <i>result</i></a>
+<p><br>[Function]<br><a class=none name='open-bug'><b>open-bug</b> <i>project title description</i> =&gt; <i>result</i></a>
 <blockquote><br>
 
 
 
 </blockquote>
 
-<!-- End of entry for UPDATE-A-BUG -->
+<!-- End of entry for OPEN-BUG -->
+
+
+<!-- Entry for UPDATE-BUG -->
+
+<p><br>[Function]<br><a class=none name='update-bug'><b>update-bug</b> <i>bug-id <tt>&amp;key</tt> title description</i> =&gt; <i>result</i></a>
+<blockquote><br>
+
+
+
+</blockquote>
+
+<!-- End of entry for UPDATE-BUG -->
 
 
 <br>&nbsp;<br><h3><a class=none name="ack">Acknowledgements</a></h3>
@@ -150,6 +133,6 @@ Get a request token and let user approve it, then exchange it to
 This documentation was prepared with <a href="http://weitz.de/documentation-template/">DOCUMENTATION-TEMPLATE</a>.
 </p>
 <p>
-Last modified: 2009/12/12 11:42:54
+Last modified: 2009/12/20 22:03:42
 </body>
 </html>

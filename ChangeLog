@@ -1,3 +1,8 @@
+2009-12-20  Plato Wu  <gtalk000@gmail.com>
+
+	* packages.lisp (:launchpad): leave out the -a- infix for function name
+	Leslie's recommendation.
+
 2009-12-11  Plato Wu  <gtalk000@gmail.com>
 
 	* example/clbuild-repos.lisp: update example.

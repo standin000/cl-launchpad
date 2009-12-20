@@ -1,6 +1,6 @@
 ;;;; -*- Mode: LISP; -*-
 (asdf:defsystem :launchpad
-  :version "0.4"
+  :version "0.5"
   :serial t
   :author "Plato Wu <gtalk000@gmail.com>"
   :license "MIT"
